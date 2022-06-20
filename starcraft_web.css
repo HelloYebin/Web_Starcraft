@@ -1,0 +1,244 @@
+body,html{
+    margin: 0;
+    height: 100%;
+}
+@font-face {
+    font-family: 'Star';
+    src: url('font/STARCRAFT.TTF') format('truetype');
+}
+td>a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+td>a:hover{
+    color: darkgray;
+}
+table{
+    width: 400px;
+    text-align: center;
+    border-collapse: collapse;
+    border-color: white;
+}
+.header{
+    height: 144px;
+    background-color: #0B0D12;
+    display: flex;
+    align-items: center;
+
+}
+.header>a>img{
+    width: 150px;
+    align-items: center;
+    margin: 40px;
+}
+.header_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.header>ul>li{
+    padding: 8px 20px;
+    font-size: 30px;
+}
+.header>ul>li>a{
+    color: darkgrey;
+    text-decoration: none;
+}
+.header>ul>li>a:hover{
+    color: white;
+}
+.header_link{
+    display: flex;
+    list-style: none;
+    right: 30px;
+    position: absolute;
+    padding-left: 0;
+}
+.title{
+    min-height: 505px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/title_background.png");
+}
+.title_img{
+    position: absolute;
+    animation: title_slide 1.5s forwards;
+
+}
+@keyframes title_slide {
+    from{
+        opacity: 0;
+        top: 240px;
+    }
+    to{
+        opacity: 1;
+        top: 320px;
+    }
+}
+.zerg{
+    min-height: 505px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+}
+
+.zerg::before{
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
+.zerg_title{
+    color: white;
+    font-size: 70pt;
+    font-family: 'Star'; 
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    opacity: 0;
+    /* animation: races_slide 1.5s forwards; */
+}
+@keyframes races_slide{
+    from{
+        opacity: 0;
+        top: 300px;
+    }to{
+        opacity: 1;
+        top: 230px;
+    }
+}
+@keyframes table_slide{
+    from{
+        opacity: 0;
+        top: 360px;
+    }to{
+        opacity: 1;
+        top: 290px;
+    }
+}
+.zerg>div>table{
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.terran{
+    min-height: 505px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: 100% 130%;
+}
+.terran::before{
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
+.terran_title{
+    color: white;
+    font-size: 70pt;
+    font-family: 'Star';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.terran>div>table{
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.protoss{
+    min-height: 505px;
+    background-attachment: fixed;
+    position: relative;
+    background-size: 100% 130%;
+    background-repeat: repeat-y;
+}
+.protoss::before{
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
+.protoss_title{
+    color: white;
+    font-size: 70pt;
+    font-family: 'Star';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: races_slide 1.5s forwards; */
+    opacity: 0;
+}
+.protoss>div>table{
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.footer{
+    height: 7%;
+    background-color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_logo>a>img{
+    width: 85px;
+}
+.copyright{
+    color : #9b9b9b;
+    font-size: 12pt;
+    padding-left: 10px;
+}
+.footer_links{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.footer_links li{
+    padding: 8px 12px;
+}
+.footer_links>li>a{
+    color: #9b9b9b;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.footer_logo{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+
+/* responsive */
+@media screen and (max-width:1669px) {
+    .header>ul>li>a{
+        font-size: 20px;
+    }
+}
